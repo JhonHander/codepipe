@@ -263,11 +263,11 @@ resource "aws_codepipeline" "app" {
     name = "Deploy_Staging"
 
     action {
-      name            = "Approve_Staging"
-      category        = "Approval"
-      owner           = "AWS"
-      provider        = "Manual"
-      version         = "1"
+      name     = "Approve_Staging"
+      category = "Approval"
+      owner    = "AWS"
+      provider = "Manual"
+      version  = "1"
 
       configuration = {
         NotificationArn = aws_sns_topic.pipeline_approvals.arn
